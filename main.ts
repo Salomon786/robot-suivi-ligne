@@ -15,30 +15,10 @@ let Position_sur_la_ligne = 0
 let Vitesse_maximale = 0
 let Vitesse_minimale = 0
 let Vitesse_de_croisière = 0
-Vitesse_de_croisière = 90
-Vitesse_minimale = 15
-Vitesse_maximale = 130
+Vitesse_de_croisière = 130
+Vitesse_minimale = 0
+Vitesse_maximale = 170
 let arret = 0
-for (let index = 0; index < 69; index++) {
-    basic.showLeds(`
-        . # # # .
-        . # . # .
-        . # # # .
-        . . . # .
-        . # # # .
-        `)
-    Rover.setALLRGB(Rover.colors(RoverColors.Red))
-    basic.pause(500)
-    basic.showLeds(`
-        . # # # .
-        . # . . .
-        . # # # .
-        . . . # .
-        . # # # .
-        `)
-    Rover.setALLRGB(Rover.colors(RoverColors.Yellow))
-    basic.pause(500)
-}
 basic.forever(function () {
     Suivre_la_ligne()
 })
